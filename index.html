@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/57b5819461.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo">
+          <ul id="menu">
+            
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Engineer</p>
+          <h1>Hey, I'm <span>Meriem</span><br>I'm from Algeria!</h1>
+        </div>
+      </div>
+    </div>
+ <!-------------about---------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1"><img src="images/me.png" alt=""></div>
+          <div class="about-col-2">
+            <h1 class="subtitle">About me</h1>
+            <p class="about-text">Currently a 4th-year Software Engineering student, I have completed several hands-on academic projects, including desktop applications, dynamic websites, and management systems with database integration. I also completed an internship in an IT department, which gave me valuable exposure to a professional environment and helped strengthen my skills. Alongside my studies, I have pursued hybrid training in areas such as design, web development, and digital tools. Through my involvement with AIESEC, I have developed strong communication, leadership, and teamwork skills. Curious, detail-oriented, and versatile, I am eager to contribute my skills to meaningful and innovative projects.
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
+              <p class="tab-links" onclick="opentab('experience',event)">Experience</p>
+              <p class="tab-links" onclick="opentab('education',event)">Education</p>
+            </div>
+
+            <div class="tab-content activ-tab" id="skills">
+              <ul>
+                <li><span>PROGRAMMING</span><br>C, HTML, CSS, PHP, SQL, BOOTSTRAP, JAVA, Flask</li>
+                <li><span>DATABASE MANAGEMENT</span><br>SQL</li>
+                <li><span>SOFTWARE DEVELOPMENT</span><br>ALGORITHMS, DATA STRUCTURES, DEBUGGING</li>
+                <li><span>TOOLS</span><br>VISUAL STUDIO CODE, WAMP, ORACLE, CANVA, FIGMA</li>
+                <li><span>LANGUAGES</span><br>Arabic (native), French (fluent), English (intermediate)</li>
+                
+              </ul>
+            </div>
+
+            <div class="tab-content" id="experience">
+              <ul>
+                <li><span>OGX Department, EP Manager</span> 2024 – 2025<br>Strategically matched participants with international opportunities, <br>
+                  leveraging a deep understanding of their needs and preferences <br>obtained through comprehensive CV assessments and goal-setting discussions.</li>
+                <li><span>IT Intern – IT Department (DSI)</span> Cevital – Béjaia, Algeria March – April 2025 (15 days)
+Observation and introductory internship within the IT Department. Explored various units (infrastructure, support, development, networks) and gained an understanding of how a large corporate IT service operates. Contributed to technical monitoring tasks and analysis of internal tools.
+                <li><span>Web Development Intern</span> Prodigy InfoTech – Remote February 2025
+Completed assigned web development tasks. Delivered project-based assignments and improved practical skills through real-world application.</li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="education">
+              <ul>
+                <li><span>Fourth-year Software Engineering</span> Université Abderrahmane Mira de Béjaia – Bejaia, Algeria<br>2022 – Current</li>
+                <li><span>Scientific Baccalaureate Lycée Stambouli</span><br>2022</li>
+                <li><span>Algorithm Training 1</span><br>ATS, 12/2023</li>  
+                <li><span>Algorithm Training 2</span><br>ATS, 05/2023</li>
+                <li><span>Java Developer Certification</span><br>ATS, 02/2024</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- services -->
+     <div id="services">
+      <div class="container">
+        <h1 class="subtitle">My services</h1>
+        <div class="services-list">
+
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>I build responsive and dynamic websites using HTML, CSS, and JavaScript. My focus is on creating modern, and user-friendly designs that work smoothly on all devices.</p>
+            <a href="#">learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-photo-film"></i>
+            <h2>Desing and Multimedia</h2>
+            <p>I create graphics, videos, and booklets using Canva and Figma. Whether for branding, social media, or marketing campaigns, my designs are visually appealing and professional.</p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>Data Base Management</h2>
+            <p>I manage and optimize databases with WAMP and Oracle to ensure secure and efficient data storage. From setup to maintenance, I provide structured and reliable solutions.</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <div id="portfolio">
+       <div class="container">
+         <h1 class="subtitle">My work</h1>
+         <div class="work-list">
+          <div class="work">
+             <img src="images/BusAura.png" alt="">
+             <div class="layer">
+              <h3>Desktop Application</h3>
+              <p>
+                a desktop application for a transport agency using Java, JavaFX, MySQL, and SceneBuilder, automating client and booking management processes.
+
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/carte pencraft.png" alt="">
+            <div class="layer">
+              <h3>Design</h3>
+              <p>
+                Designed digital content and user interfaces using Figma and Canva for projects, creating engaging visuals for marketing materials, social media, and event branding
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/site pencraft.png" alt="">
+            <div class="layer">
+              <h3>Pencraft website</h3>
+              <p>
+                functional online shop using HTML, CSS, Flask, and SQL, offering features like user authentication, product listings, and a shopping cart.
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+     <a href="" class="btn">See more</a>
+
+     <!-- contact -->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p> <a href=""><i class="fa-solid fa-square-envelope"></i></a> meriemhamouchepro@gmail.com</p>
+            <p> <a href=""><i class="fa-solid fa-phone"></i></a> 0123456789</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="www.linkedin.com/in/meriem-hamouche-9b879b254"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.reddit.com/user/meriem2004/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><i class="fa-brands fa-square-reddit"></i></a>
+            </div>
+
+            <a href="images/MY_CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+            <form action="" name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your mail" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit <a href=""><i class="fa-solid fa-paper-plane"></i></a></button>
+              <span id="msg"></span>
+            </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+         <p>copyright <i class="fa-regular fa-copyright"></i> Meriem . made with <i class="fa-solid fa-heart"></i></p> 
+        </div>
+      </div>
+     
+
+
+
+     
+<!-- script portfolio -->
+    <script>
+     var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-content");
+var activeTab = null; 
+
+function opentab(tabname, event) {
+    var clickedTab = event.currentTarget;
+    var targetContent = document.getElementById(tabname);
+
+    //Si on clique sur le même onglet actif, on le ferme
+    if (activeTab === tabname) {
+        clickedTab.classList.remove("active-link");
+        targetContent.classList.remove("activ-tab");
+        activeTab = null; 
+        return;
+    }
+
+    //Sinon, on désactive tous les onglets avant d'activer le nouveau
+    for (var tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (var tabcontent of tabcontents) {
+        tabcontent.classList.remove("activ-tab");
+    }
+
+    clickedTab.classList.add("active-link");
+    targetContent.classList.add("activ-tab");
+
+    //Mettre à jour l'onglet actif
+    activeTab = tabname;
+}
+
+    </script>
+<!-- script menu -->
+    <script>
+       var menu=document.getElementById("menu");
+
+       function closemenu()
+       {
+        menu.style.right="-200px";
+       }
+
+       function openmenu()
+       {
+        menu.style.right="0";
+       }
+    </script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbymIpKLSR3zVzsrXLHM4pWR5GheM8x-VAmw3kUjzXeQjeeQGt1etZhlEavN1ikczHBMDw/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message envoyé avec succès ! ✅";
+            msg.style.display = "block"; // Afficher le message
+            setTimeout(() => {
+                msg.style.opacity = "1"; // Rendre visible progressivement
+            }, 100);
+            
+            setTimeout(() => {
+                msg.style.opacity = "0"; // Disparaît après 5s
+                setTimeout(() => {
+                    msg.style.display = "none"; // Cache complètement après disparition
+                }, 500);
+            }, 5000);
+
+            form.reset();
+        })
+        .catch(error => {
+            msg.innerHTML = "❌ Erreur lors de l'envoi !";
+            msg.style.color = "red";
+            msg.style.display = "block";
+            msg.style.opacity = "1";
+
+            setTimeout(() => {
+                msg.style.opacity = "0";
+                setTimeout(() => {
+                    msg.style.display = "none";
+                }, 500);
+            }, 5000);
+        });
+});
+
+    </script>
+
+  </body>
+</html>
+
