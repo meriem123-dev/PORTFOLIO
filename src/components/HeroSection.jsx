@@ -50,11 +50,31 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="lg:h-full md:flex">
-              <div className="flex w-full h-96 min-h-96 lg:min-h-[none] lg:w-full items-center relative">
-                <div className="absolute z-0 top-1/2 -translate-y-1/2 w-5/6 right-0 h-[calc(80%-20px)] bg-linear-to-r from-[#264fa8] blur-2xl  opacity-25"></div>
+              {/* Blur*/}
+              <div className="hidden lg:flex w-full h-96 lg:min-h-0 lg:w-full items-center relative">
+                <div className="absolute z-0 top-1/2 -translate-y-1/2 w-5/6 right-0 h-[calc(80%-20px)] bg-linear-to-r from-[#264fa8] blur-2xl opacity-25"></div>
               </div>
+              {/* img Mobile*/}
+              <div className="flex justify-center lg:hidden py-5">
+                <div
+                  className="p-2 shadow-lg border border-primary w-72 h-80"
+                  style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
+                >
+                  <img
+                    src={HeaderImage}
+                    alt="Header Image"
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                    style={{
+                      borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* img Desktop */}
               <div
-                className="absolute z-10 p-2 -translate-y-1/2 top-1/3 lg:right-3 md:right-40 sm:right-16 shadow-lg border border-primary w-72 h-80 lg:w-96 lg:h-[420px]"
+                className="hidden lg:block absolute z-10 p-2 -translate-y-1/2 top-1/3 lg:right-3 shadow-lg border border-primary lg:w-96 lg:h-[420px]"
                 style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
               >
                 <img
