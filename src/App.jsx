@@ -7,6 +7,10 @@ import HeroSection from './components/HeroSection'
 import Education from './components/Education'
 import Certificates from './components/Certificates'
 import AboutSection from './components/AboutSection'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
 
 const App=() => {
 
@@ -25,6 +29,10 @@ const App=() => {
       <Education/>
       <Certificates/>
       <AboutSection/>
+      <Experience/>
+      <Projects/>
+      <ContactSection/>
+      <Footer/>
     </div>
   )
 }

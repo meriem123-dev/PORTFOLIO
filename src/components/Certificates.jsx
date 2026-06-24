@@ -47,7 +47,7 @@ const Certificates = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {certif.map((cert)=>(
-                    <div key={cert.id} data-aos='zoom-in' className='group relative bg-[#3e82e74e] border border-primary/80 p-6 rounded-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]'>
+                    <div key={cert.id} data-aos='zoom-in' className='group relative bg-[#3e82e74e] border border-primary p-6 rounded-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]'>
                         <div className='absolute -top-4 -right-4 bg-primary p-3 rounded-xl shadow-lg transform group-hover:rotate-12 transition-transform'>
                             <Award className='text-white' size={24}/>
                         </div>
