@@ -5,6 +5,8 @@ import 'aos/dist/aos.css'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import Education from './components/Education'
+import Certificates from './components/Certificates'
+import AboutSection from './components/AboutSection'
 
 const App=() => {
 
@@ -21,6 +23,8 @@ const App=() => {
       <Header />
       <HeroSection />
       <Education/>
+      <Certificates/>
+      <AboutSection/>
     </div>
   )
 }
