@@ -3,12 +3,16 @@ import React from "react";
 
 import HeaderImage from "../assets/HeaderImage.jpg";
 
+const scrollToSection = (href) => {
+  document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+};
+
 const HeroSection = () => {
   return (
     <section className="relative w-full " data-aos="zoom-in-up">
-      <div className="absolute top-0 inset-x-0 h-64 flex items-start">
-        <div className="h-24 w-2/3 bg-linear-to-br from-[#264fa8] blur-2xl invisible opacity-40"></div>
-        <div className="h-20 w-3/4 bg-linear-to-r from-[#30529b] blur-2xl  opacity-40"></div>
+      <div className="absolute top-0 inset-x-0 h-full pointer-events-none overflow-hidden">
+        <div className="absolute top-[-80px] left-[-60px] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]" />
+        <div className="absolute top-[-40px] right-[-60px] w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="w-full px-5 sm:px-8 md:px-12 lg:px-8 max-w-5xl lg:max-w-7xl mx-auto-relative ">
@@ -22,35 +26,40 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-gray-300 pt-8 text-center lg:text-left mx-auto mx-w-xl mt-4">
-                I’m a Software Engineering student passionate about technology
-                and problem-solving. I love building applications that combine
-                functionality, performance, and good design.
+                I'm a Software Engineering student passionate about creating
+                modern, reliable, and user-centered applications. I enjoy
+                turning ideas into real-world solutions through clean code,
+                intuitive design, and continuous learning. I actively explore
+                AI-powered tools to enhance development workflows, boost
+                productivity, and accelerate problem-solving while maintaining a
+                solid understanding of the technologies behind every project.
               </p>
               <div className="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max lg:mx-0">
-                <button className="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
-                  <span className="absolute inset-0 bg-primary rounded-3xl  opacity-75 group-hover:scale-105 transition-all ease-in-out border-2 border-transparent"></span>
+                <button
+                  className="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center "
+                  onClick={() => scrollToSection("#contact")}
+                >
+                  <span className="absolute inset-0 bg-primary rounded-3xl  opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all ease-in-out border-2 border-transparent"></span>
                   <span className="relative flex items-center justify-center text-white">
                     Hire Me{" "}
                   </span>
                 </button>
 
-                <button className="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
-                  <div className="flex items-center">
-                    <Download size={18} className="text-primary" />
-                    <div className="download-loader text-white hidden"></div>
-                    <a
-                      href="/cv.pdf"
-                      download="resume.pdf"
-                      className="pl-2 text-primary"
-                    >
-                      Download resume
-                    </a>
-                  </div>
-                </button>
+                <a
+                  href="/CV_English.pdf"
+                  download
+                  className="border border-primary px-6 md:px-7 py-3 rounded-full w-full sm:w-max flex justify-center items-center gap-2 
+                                 text-primary hover:bg-primary hover:text-white transition-all duration-300 group"
+                >
+                  <Download
+                    size={18}
+                    className="group-hover:text-white transition-colors duration-300"
+                  />
+                  Download resume
+                </a>
               </div>
             </div>
             <div className="lg:h-full md:flex">
-
               {/* img Mobile*/}
               <div className="flex justify-center lg:hidden py-5">
                 <div

@@ -12,6 +12,9 @@ import Projects from './components/Projects'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 
+import CustomCursor from './components/CustomCursor'
+import ParticlesBackground from './components/ParticlesBackground'
+
 const App=() => {
 
   useEffect(() => {
@@ -23,7 +26,10 @@ const App=() => {
   }, []);
 
   return (
-    <div className='bg-[#111827] min-h-screen'>
+    <div className='bg-[#111827] min-h-screen cursor-none'>
+      <CustomCursor />
+      <ParticlesBackground />
+
       <Header />
       <HeroSection />
       <Education/>

@@ -85,7 +85,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="fade-left max-w-7xl">
+        <div className="fade-left max-w-7xl" data-aos="fade-left">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12">
             Work <span className="text-primary">Experience</span>
           </h2>
