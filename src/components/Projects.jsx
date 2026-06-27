@@ -1,39 +1,56 @@
 import React from "react";
-import prj1 from "../assets/prj1.png";
+import cityquest from "../assets/cityquest.jpeg";
+import connect from "../assets/connect.png";
+import roadskill from "../assets/roadskill.png";
+import pencraft from "../assets/roadskill.png";
+
+import { FolderGit2 } from "lucide-react";
 
 const Projects = () => {
   const projets = [
     {
       id: 1,
-      image: prj1,
-      title: "CityQuest",
-      desc: "10:58:16 PM [vite] (client) hmr update /src/index.css, /src/components/Projects.jsx (x5)",
-      tech: ["React", "Node.js", "MangoDB"],
+      image: cityquest,
+      title: "CitiQuest",
+      desc: "A gamified citizen engagement mobile application that encourages community participation through location-based missions, XP rewards, badges, and real-time notifications. Includes dedicated spaces for citizens, associations, and administrators.",
+      tech: [
+        "React Native",
+        "Expo",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Firebase",
+      ],
+      github: "https://github.com/imenelc1/citiQuest",
     },
     {
       id: 2,
-      image: prj1,
-      title: "CityQuest",
-      desc: "10:58:16 PM [vite] (client) hmr update /src/index.css, /src/components/Projects.jsx (x5)",
-      tech: ["React", "Node.js", "MangoDB"],
+      image: connect,
+      title: "Connect",
+      desc: "A full-stack e-learning platform designed for universities, featuring course management, coding exercises, quizzes, gamification, collaborative spaces, and an AI-powered educational assistant.",
+      tech: ["React", "Django", "PostgreSQL", "Tailwind CSS", "Groq AI"],
+      github: "https://github.com/imenelc1/Connect",
     },
     {
       id: 3,
-      image: prj1,
-      title: "CityQuest",
-      desc: "10:58:16 PM [vite] (client) hmr update /src/index.css, /src/components/Projects.jsx (x5)",
-      tech: ["React", "Node.js", "MangoDB"],
+      image: roadskill,
+      title: "RoadSkill",
+      desc: "A desktop management system for driving schools that centralizes learner records, lesson scheduling, examinations, payments, document management, and analytics in a modern Electron application.",
+      tech: ["Electron", "React", "TypeScript", "Node.js", "SQLite"],
+      github: "https://github.com/imenelc1/roadskill",
     },
     {
       id: 4,
-      image: prj1,
-      title: "CityQuest",
-      desc: "10:58:16 PM [vite] (client) hmr update /src/index.css, /src/components/Projects.jsx (x5)",
-      tech: ["React", "Node.js", "MangoDB"],
+      image: pencraft,
+      title: "Pencraft",
+      desc: "A full-stack e-commerce platform for personalized graphic design and printing services, allowing customers to place orders, and manage purchases through an intuitive interface.",
+      tech: ["Flask", "MySQL", "JavaScript", "HTML", "CSS"],
+      github: "https://github.com/meriem123-dev/pencraft",
     },
   ];
+
   return (
-    <section className="py-16 bg-gray-900 " id="projects">
+    <section className="relative py-24 overflow-hidden" id="projects">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white">
@@ -47,13 +64,15 @@ const Projects = () => {
           {projets.map((prj) => (
             <div
               key={prj.id}
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:scale-105 trannsition-all duration-300 "
+              className="group relative bg-primary/10 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_0_40px_-5px_rgba(62,130,231,0.2)]"
             >
-              <img
-                src={prj.image}
-                alt={prj.title}
-                className="w-full h-44 object-cover hover:opacity-90 transition-opacity duration-300"
-              />
+              <div className="overflow-hidden">
+                <img
+                  className="w-full h-44 object-cover transition-transform duration-700 group-hover:scale-105"
+                  src={prj.image}
+                  alt={prj.title}
+                />
+              </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors ">
                   {prj.title}
@@ -69,6 +88,24 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                <a
+                  href={prj.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                              flex items-center gap-2
+                              py-4
+                              rounded-lg
+                              text-primary
+                              hover:bg-primary
+                              hover:text-white
+                              transition-all
+                              duration-300
+                            "
+                >
+                  <FolderGit2 size={14}/>
+                  GitHub
+                </a>
               </div>
             </div>
           ))}

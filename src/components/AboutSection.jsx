@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "../assets/HeaderImage.jpg"
+import HeaderImage from "../assets/HeaderImage.jpg";
 
 const AboutSection = () => {
   return (
@@ -11,38 +11,50 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-gray-400 text-base lg:text-lg mb-10 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sunt
-            sapiente totam, adipisci molestiae tempore itaque,
-            <br />
-            repellendus voluptas qui nihil eligendi excepturi commodi, quidem
-            placeat voluptatum officiis ex doloribus fuga?
+            I'm a fourth-year Software Engineering student who enjoys learning
+            through hands-on projects and practical challenges. I like exploring
+            new technologies and improving my technical skills by building
+            real-world applications.<br/> Recently, I've started solving coding
+            challenges on LeetCode and exploring cybersecurity labs on Hack The
+            Box. I'm also interested in using AI tools to enhance software
+            development and improve productivity while continuing to learn and
+            grow as a future software engineer.
           </p>
 
           <div className="grid grid-cols-3 gap-6 max-w-xl ">
-            <div className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 ">
-              <h3 className="text-primary font-bold text-2xl md:text-3xl ">
-                +200
+            <div
+              className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 hover:-translate-y-2"
+              data-aos="zoom-in"
+            >
+              <h3 className="text-primary font-bold text-xl md:text-2xl ">
+                4th Year
               </h3>
               <p className="text-xs text-gray-400 uppercase tracking-wider mt-0.5 ">
-                Clients
+                Software Engineering
               </p>
             </div>
 
-            <div className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 ">
+            <div
+              className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 hover:-translate-y-2"
+              data-aos="zoom-in"
+            >
               <h3 className="text-primary font-bold text-2xl md:text-3xl ">
-                +100
+                +4
               </h3>
               <p className="text-xs text-gray-400 uppercase tracking-wider mt-0.5 ">
                 Projects
               </p>
             </div>
 
-            <div className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 ">
-              <h3 className="text-primary font-bold text-2xl md:text-3xl ">
-                +2
+            <div
+              className="text-center rounded-2xl bg-[#3e82e74e] border border-primary hover:border-primary/50 hover:-translate-y-2"
+              data-aos="zoom-in"
+            >
+              <h3 className="text-primary font-bold text-xl md:text-2xl ">
+                Continuous
               </h3>
               <p className="text-xs text-gray-400 uppercase tracking-wider mt-0.5 ">
-                Years
+                Learning
               </p>
             </div>
           </div>
@@ -55,10 +67,11 @@ const AboutSection = () => {
           <div className="relative w-64 h-64 md:w-96 md:h-120 ">
             <div className="absolute inset-0 z-0 rounded-full shadow-lg border border-primary translate-x-4 translate-y-4"></div>
             <div className="relative z-10 w-full h-full bg-[#3e82e74e] rounded-full overflow-hidden border border-white">
-                <img src={HeaderImage} alt="About" 
-                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 "
-                />
-
+              <img
+                src={HeaderImage}
+                alt="About"
+                className="w-full h-full object-fill transition-transform duration-500 hover:scale-110 "
+              />
             </div>
           </div>
         </div>

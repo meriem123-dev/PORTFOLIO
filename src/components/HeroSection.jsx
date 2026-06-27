@@ -49,7 +49,7 @@ const HeroSection = () => {
                   href="/CV_English.pdf"
                   download
                   className="border border-primary px-6 md:px-7 py-3 rounded-full w-full sm:w-max flex justify-center items-center gap-2 
-                                 text-primary hover:bg-primary hover:text-white transition-all duration-300 group"
+                                 text-primary hover:bg-primary hover:text-white hover:border-white transition-all duration-300 group"
                 >
                   <Download
                     size={18}
