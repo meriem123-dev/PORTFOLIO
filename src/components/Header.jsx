@@ -36,7 +36,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="text-white text-2xl font-bold cursor-pointer tracking-tight">
-            My Portfolio<span className="text-primary">.</span>
+            My Portfolio<span className="text-primary"> . </span>
           </div>
 
           {/* Desktop nav */}

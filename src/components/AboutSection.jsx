@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "../assets/HeaderImage.jpg";
+import about from "../assets/about.jpg";
 
 const AboutSection = () => {
   return (
@@ -68,7 +68,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 z-0 rounded-full shadow-lg border border-primary translate-x-4 translate-y-4"></div>
             <div className="relative z-10 w-full h-full bg-[#3e82e74e] rounded-full overflow-hidden border border-white">
               <img
-                src={HeaderImage}
+                src={about}
                 alt="About"
                 className="w-full h-full object-fill transition-transform duration-500 hover:scale-110 "
               />

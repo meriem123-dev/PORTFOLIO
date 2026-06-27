@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
-import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import React, { useState } from "react";
 
 import HeaderImage from "../assets/HeaderImage.jpg";
 
@@ -8,6 +9,8 @@ const scrollToSection = (href) => {
 };
 
 const HeroSection = () => {
+  
+
   return (
     <section className="relative w-full " data-aos="zoom-in-up">
       <div className="absolute top-0 inset-x-0 h-full pointer-events-none overflow-hidden">
@@ -19,11 +22,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
           <div className="lg:py-6">
             <div className="text-center lg:text-left">
-              <h1 className="pt-4 text-white font-bold text-4xl md:text-7xl-5xl lg:text-6xl">
-                Hello, I'm{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#2493e8] to-cyan-400">
-                  Meriem{" "}
-                </span>
+              <h1 className="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
+                <TypeAnimation
+                  sequence={["Hello, I'm Meriem", 1000]}
+                  wrapper="span"
+                  speed={10}
+                  repeat={0}
+                  cursor={true}
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-primary"
+                />
               </h1>
               <p className="text-gray-300 pt-8 text-center lg:text-left mx-auto mx-w-xl mt-4">
                 I'm a Software Engineering student passionate about creating

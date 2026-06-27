@@ -55,7 +55,6 @@ const Education = () => {
             data-aos="fade-right"
           >
             <div className="relative w-64 md:w-80 h-80 md:h-[420px]">
-
               {/* Image */}
               <div className="relative z-20 w-full h-full rounded-3xl overflow-hidden shadow-lg hover:scale-110">
                 <img
@@ -75,61 +74,119 @@ const Education = () => {
             {eduData.map((edu, index) => (
               <div
                 key={edu.id}
-                className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1"
+                className="group relative rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-1 border border-white/10 hover:border-primary/40"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Glass background */}
-                <div className="absolute inset-0 bg-[#3e82e74e] backdrop-blur-sm border border-white/10  group-hover:border-white rounded-2xl group-hover:border-primary/40 transition-colors duration-500" />
-
-                {/* Glow on hover */}
+                {/* Glow */}
                 <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{ boxShadow: "0 0 40px 0 rgba(62,130,231,0.12)" }}
                 />
 
-                {/* Left accent bar */}
-                <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-primary/30 group-hover:bg-primary transition-colors duration-300" />
-
-                <div className="relative z-10 p-6 pl-8">
-                  {/* Top row */}
-                  <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary/15 border border-primary/30 rounded-xl group-hover:bg-primary/25 transition-colors duration-300">
-                        <GraduationCap className="text-primary" size={20} />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold text-white leading-tight group-hover:text-primary transition-colors duration-300">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-gray-400 text-xs mt-0.5 flex items-center gap-1">
-                          <MapPin size={10} className="text-primary/60" />
-                          {edu.school}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Year badge */}
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary text-xs font-semibold">
-                      <Calendar size={11} />
-                      {edu.year}
-                    </div>
+                {/* Tab bar */}
+                <div className="flex items-center gap-0 bg-[#1e1e2e] border-b border-white/10">
+                  {/* Traffic lights */}
+                  <div className="flex items-center gap-1.5 px-3 py-2.5 border-r border-white/10">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                    {edu.details}
-                  </p>
+                  {/* Active tab */}
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#1a1a2e] border-r border-white/10 text-xs text-gray-300">
+                    <GraduationCap size={12} className="text-primary" />
+                    {index === 0
+                      ? "software_engineering.ts"
+                      : "baccalaureate.ts"}
+                  </div>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {edu.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300 group-hover:border-primary/20 transition-colors duration-300"
-                      >
-                        {tag}
-                      </span>
+                  {/* Inactive tab */}
+                  <div className="flex items-center gap-2 px-4 py-2 text-xs text-gray-600">
+                    {index === 0
+                      ? "baccalaureate.ts"
+                      : "software_engineering.ts"}
+                  </div>
+                </div>
+
+                {/* Editor body */}
+                <div className="flex bg-[#12121e]">
+                  {/* Line numbers */}
+                  <div className="flex flex-col items-end px-3 pt-4 pb-4 text-[11px] text-gray-600 select-none font-mono border-r border-white/5 leading-6 min-w-[36px]">
+                    {Array.from({ length: 10 }, (_, i) => (
+                      <span key={i}>{i + 1}</span>
                     ))}
+                  </div>
+
+                  {/* Code content */}
+                  <div className="p-4 font-mono text-[12px] leading-6 overflow-x-auto w-full">
+                    <div>
+                      <span className="text-purple-400">const </span>
+                      <span className="text-blue-300">education</span>
+                      <span className="text-white"> = </span>
+                      <span className="text-yellow-300">{"{"}</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-primary">degree</span>
+                      <span className="text-white">: </span>
+                      <span className="text-green-300">"{edu.degree}"</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-primary">University</span>
+                      <span className="text-white">: </span>
+                      <span className="text-green-300">"{edu.school}"</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-primary">year</span>
+                      <span className="text-white">: </span>
+                      <span className="text-green-300">"{edu.year}"</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-primary">details</span>
+                      <span className="text-white">: </span>
+                      <span className="text-green-300">"{edu.details}"</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-primary">tags</span>
+                      <span className="text-white">: [</span>
+                    </div>
+                    <div className="pl-8 flex flex-wrap gap-x-1">
+                      {edu.tags.map((tag, i) => (
+                        <span key={tag}>
+                          <span className="text-orange-300">"{tag}"</span>
+                          {i < edu.tags.length - 1 && (
+                            <span className="text-white">, </span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-white">],</span>
+                    </div>
+                    <div>
+                      <span className="text-yellow-300">{"}"}</span>
+                      <span className="text-white">;</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Status bar */}
+                <div className="flex items-center justify-between px-3 py-1 bg-primary/80 text-[10px] text-white/80 font-mono">
+                  <div className="flex items-center gap-3">
+                    <span>⎇ main</span>
+                    <span className="flex items-center gap-1">
+                      <MapPin size={9} />
+                      {edu.school}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span>TypeScript</span>
+                    <span>UTF-8</span>
+                    <Calendar size={9} />
+                    <span>{edu.year}</span>
                   </div>
                 </div>
               </div>

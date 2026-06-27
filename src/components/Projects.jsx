@@ -2,7 +2,7 @@ import React from "react";
 import cityquest from "../assets/cityquest.jpeg";
 import connect from "../assets/connect.png";
 import roadskill from "../assets/roadskill.png";
-import pencraft from "../assets/roadskill.png";
+import pencraft from "../assets/pencraft.png";
 
 import { FolderGit2 } from "lucide-react";
 
