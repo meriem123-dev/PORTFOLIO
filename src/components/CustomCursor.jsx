@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MousePointer } from "lucide-react";
+import { MousePointerClick } from "lucide-react";
 
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -21,14 +21,14 @@ export default function CustomCursor() {
 
   return (
     <div
-      className="fixed pointer-events-none z-[9999] text-primary"
+      className="fixed pointer-events-none z-[9999] text-white"
       style={{
         left: position.x,
         top: position.y,
         transform: "translate(-50%, -50%)",
       }}
     >
-      <MousePointer size={28} />
+      <MousePointerClick size={28}/>
     </div>
   );
 }

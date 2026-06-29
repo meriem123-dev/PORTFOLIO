@@ -14,69 +14,172 @@ import {
   Database,
   DatabaseZap,
   GitBranch,
+  FileBraces,
+  Container,
+  Smartphone,
+  CodeXml,
+  File,
+  Flame,
+  Monitor
 } from "lucide-react";
 
 const Experience = () => {
-  const skills = [
+  const skillcats = [
     {
       id: 1,
-      name: "React",
-      width: "70%",
-      icon: Atom,
+      label: "Frontend",
+      items: [
+        {
+          id: 1,
+          name: "HTML",
+          width: "90%",
+          icon: CodeXml,
+        },
+        {
+          id: 2,
+          name: "CSS",
+          width: "80%",
+          icon: File,
+        },
+        {
+          id: 3,
+          name: "JavaScript",
+          width: "80%",
+          icon: FileCode,
+        },
+        {
+          id: 4,
+          name: "React",
+          width: "70%",
+          icon: Atom,
+        },
+        {
+          id: 5,
+          name: "Tailwind CSS",
+          width: "80%",
+          icon: Wind,
+        },
+      ],
     },
     {
       id: 2,
-      name: "Node.js",
-      width: "60%",
-      icon: Server,
+      label: "Backend",
+      items: [
+        {
+          id: 6,
+          name: "Node.js",
+          width: "60%",
+          icon: Server,
+        },
+        {
+          id: 7,
+          name: "Flask",
+          width: "60%",
+          icon: FlaskConical,
+        },
+      ],
     },
     {
       id: 3,
-      name: "Python",
-      width: "60%",
-      icon: Code2,
+      label: "Programming Languages",
+      items: [
+        {
+          id: 8,
+          name: "Java",
+          width: "80%",
+          icon: Coffee,
+        },
+        {
+          id: 9,
+          name: "Python",
+          width: "60%",
+          icon: Code2,
+        },
+        {
+          id: 10,
+          name: "C",
+          width: "80%",
+          icon: FileBraces,
+        },
+      ],
     },
     {
       id: 4,
-      name: "JAVA",
-      width: "80%",
-      icon: Coffee,
+      label: "Databases",
+      items: [
+        {
+          id: 11,
+          name: "PostgreSQL",
+          width: "70%",
+          icon: Database,
+        },
+        {
+          id: 12,
+          name: "MongoDB",
+          width: "80%",
+          icon: DatabaseZap,
+        },
+        {
+          id: 13,
+          name: "MySQL",
+          width: "85%",
+          icon: Database,
+        },
+      ],
     },
     {
-      id: 4,
-      name: "Flask",
-      width: "60%",
-      icon: FlaskConical,
+      id: 5,
+      label: "Tools & Platforms",
+      items: [
+        {
+          id: 14,
+          name: "Git & GitHub",
+          width: "60%",
+          icon: GitBranch,
+        },
+        {
+          id: 15,
+          name: "Docker",
+          width: "50%",
+          icon: Container,
+        },
+        {
+          id: 16,
+          name: "Firebase",
+          width: "60%",
+          icon: Flame,
+        },
+      ],
     },
     {
-      id: 4,
-      name: "JavaScript",
-      width: "60%",
-      icon: FileCode,
+      id: 6,
+      label: "Mobile Development",
+      items: [
+        {
+          id: 17,
+          name: "React Native",
+          width: "60%",
+          icon: Smartphone,
+        },
+        {
+          id: 18,
+          name: "Expo",
+          width: "70%",
+          icon: Smartphone,
+        },
+      ],
     },
     {
-      id: 4,
-      name: "Tailwind CSS",
-      width: "80%",
-      icon: Wind,
-    },
-    {
-      id: 4,
-      name: "PostgreSQL",
-      width: "70%",
-      icon: Database,
-    },
-    {
-      id: 4,
-      name: "MangoDB",
-      width: "80%",
-      icon: DatabaseZap,
-    },
-    {
-      id: 4,
-      name: "Git and GitHub",
-      width: "60%",
-      icon: GitBranch,
+      id: 7,
+      label: "Desktop Development",
+      items: [
+        {
+          id: 19,
+          name: "Electron",
+          width: "60%",
+          icon: Monitor,
+        },
+      ],
     },
   ];
 
@@ -109,44 +212,60 @@ const Experience = () => {
 
   return (
     <section className="text-white py-20 relative overflow-hidden" id="skills">
-      <div className=" grid lg:grid-cols-2 gap-20 max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
+      <div className="grid lg:grid-cols-2 gap-20 max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
         <div data-aos="fade-right">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12">
             Technical <span className="text-primary"> Skills </span>
           </h2>
-          <div className="space-y-5">
-            {skills.map((sk) => {
-              const SkIcon = sk.icon;
-              return (
-                <div key={sk.id} className="group">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-[#3e82e74e] rounded-lg group-hover:bg-primary transition-colors duration-300">
-                      <SkIcon
-                        size={16}
-                        className="text-primary group-hover:text-white "
-                      />
-                    </div>
 
-                    <span className="font-medium tracking-wide text-sm">
-                      {sk.name}
-                    </span>
-                  </div>
+          <div className="space-y-8">
+            {skillcats.map((cat) => (
+              <div key={cat.id}>
+                {/* Category*/}
+                <p className="text-primary text-xs uppercase tracking-widest mb-4 font-semibold">
+                  {cat.label}
+                </p>
 
-                  <div className="flex justify-end">
-                    <span className="text-primary font-bold justify-end">
-                      {sk.width}
-                    </span>
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {cat.items.map((sk) => {
+                    const SkIcon = sk.icon;
+                    return (
+                      <div key={sk.id} className="group">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 bg-[#3e82e74e] rounded-lg group-hover:bg-primary transition-colors duration-300">
+                            <SkIcon
+                              size={16}
+                              className="text-primary group-hover:text-white"
+                            />
+                          </div>
+                          <span className="font-medium tracking-wide text-sm">
+                            {sk.name}
+                          </span>
+                        </div>
 
-                  <div className="h-1.5 w-full bg-[#3e82e74e] rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-b-full bg-linear-to-r from-primary to-cyan-400 shadow-[0_0_10px_#3e82e74e]"
-                      style={{ width: sk.width }}
-                    ></div>
-                  </div>
+                        <div className="flex justify-end">
+                          <span className="text-primary font-bold">
+                            {sk.width}
+                          </span>
+                        </div>
+
+                        <div className="h-1.5 w-full bg-[#3e82e74e] rounded-full overflow-hidden">
+                          <div
+                            className="h-full rounded-b-full bg-linear-to-r from-primary to-cyan-400 shadow-[0_0_10px_#3e82e74e]"
+                            style={{ width: sk.width }}
+                          ></div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+
+                {/* Divider between categories */}
+                {cat.id !== skillcats[skillcats.length - 1].id && (
+                  <div className="mt-6 border-t border-white/5" />
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
