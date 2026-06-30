@@ -26,7 +26,7 @@ const App=() => {
   }, []);
 
   return (
-    <div className='bg-[#111827] min-h-screen cursor-none'>
+    <div className='bg-[#111827] min-h-screen '>
       <CustomCursor />
       <ParticlesBackground />
 

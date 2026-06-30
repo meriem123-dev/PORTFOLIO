@@ -20,7 +20,7 @@ import {
   CodeXml,
   File,
   Flame,
-  Monitor
+  Monitor,
 } from "lucide-react";
 
 const Experience = () => {
@@ -211,9 +211,9 @@ const Experience = () => {
   ];
 
   return (
-    <section className="text-white py-20 relative overflow-hidden" id="skills">
-      <div className="grid lg:grid-cols-2 gap-20 max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
-        <div data-aos="fade-right">
+    <section className="text-white py-20 relative overflow-hidden " id="skills">
+      <div className="grid lg:grid-cols-2 gap-20 max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
+        <div data-aos="fade-right mx-5">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12">
             Technical <span className="text-primary"> Skills </span>
           </h2>
@@ -269,15 +269,15 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="fade-left max-w-7xl" data-aos="fade-left">
+        <div className="fade-left max-w-7xl min-w-0" data-aos="fade-left">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12">
             Experience
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-6 min-w-0">
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className="group relative rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-1 border border-white/10 hover:border-primary/40"
+                className="group relative rounded-xl overflow-hidden min-w-0 transition-all duration-500 hover:-translate-y-1 border border-white/10 hover:border-primary/40"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Glow */}
@@ -287,7 +287,7 @@ const Experience = () => {
                 />
 
                 {/* Tab bar */}
-                <div className="flex items-center gap-0 bg-[#1e1e2e] border-b border-white/10">
+                <div className="flex items-center gap-0 bg-[#1e1e2e] border-b border-white/10 min-w-0">
                   <div className="flex items-center gap-1.5 px-3 py-2.5 border-r border-white/10">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
@@ -295,9 +295,11 @@ const Experience = () => {
                   </div>
 
                   {/* Active tab */}
-                  <div className="flex items-center gap-2 px-4 py-2 bg-[#1a1a2e] border-r border-white/10 text-xs text-gray-300">
-                    <Briefcase size={12} className="text-primary" />
-                    {exp.role.toLowerCase().replace(/\s+/g, "_")}.ts
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#1a1a2e] border-r border-white/10 text-xs text-gray-300 min-w-0">
+                    <Briefcase size={12} className="text-primary shrink-0" />
+                    <span className="truncate">
+                      {exp.role.toLowerCase().replace(/\s+/g, "_")}.ts
+                    </span>
                   </div>
 
                   {/* Inactive tab */}
@@ -307,7 +309,7 @@ const Experience = () => {
                 </div>
 
                 {/* Editor body */}
-                <div className="flex bg-[#12121e]">
+                <div className="flex bg-[#12121e]  min-w-0">
                   {/* Line numbers */}
                   <div className="flex flex-col items-end px-3 pt-4 pb-4 text-[11px] text-gray-600 select-none font-mono border-r border-white/5 leading-6 min-w-[36px]">
                     {Array.from({ length: 9 }, (_, i) => (
@@ -316,7 +318,7 @@ const Experience = () => {
                   </div>
 
                   {/* Code content */}
-                  <div className="p-4 font-mono text-[12px] leading-6 overflow-x-auto w-full">
+                  <div className="p-4 min-w-0 font-mono text-[12px] leading-6  w-full">
                     <div>
                       <span className="text-purple-400">const </span>
                       <span className="text-blue-300">experience</span>
@@ -326,25 +328,29 @@ const Experience = () => {
                     <div className="pl-4">
                       <span className="text-primary">role</span>
                       <span className="text-white">: </span>
-                      <span className="text-green-300">"{exp.role}"</span>
+                      <span className="text-green-300 break-words">"{exp.role}"</span>
                       <span className="text-white">,</span>
                     </div>
                     <div className="pl-4">
                       <span className="text-primary">company</span>
                       <span className="text-white">: </span>
-                      <span className="text-green-300">"{exp.company}"</span>
+                      <span className="text-green-300 break-words">
+                        "{exp.company}"
+                      </span>
                       <span className="text-white">,</span>
                     </div>
                     <div className="pl-4">
                       <span className="text-primary">date</span>
                       <span className="text-white">: </span>
-                      <span className="text-green-300">"{exp.date}"</span>
+                      <span className="text-green-300 break-words">
+                        "{exp.date}"
+                      </span>
                       <span className="text-white">,</span>
                     </div>
                     <div className="pl-4">
                       <span className="text-primary">description</span>
                       <span className="text-white">: </span>
-                      <span className="text-green-300">
+                      <span className="text-green-300 break-words">
                         "{exp.description}"
                       </span>
                       <span className="text-white">,</span>
@@ -357,15 +363,15 @@ const Experience = () => {
                 </div>
 
                 {/* Status bar */}
-                <div className="flex items-center justify-between px-3 py-1 bg-primary/80 text-[10px] text-white/80 font-mono">
+                <div className="flex items-center justify-between px-3 py-1 bg-primary/80 text-[10px] text-white/80 font-mono min-w-0 flex-wrap gap-y-1">
                   <div className="flex items-center gap-3">
                     <span>⎇ main</span>
-                    <span className="flex items-center gap-1">
+                    <span className="flex items-center gap-1 break-words">
                       <BriefcaseBusiness size={9} />
                       {exp.company}
                     </span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 break-words">
                     <span>TypeScript</span>
                     <span>UTF-8</span>
                     <Calendar size={9} />

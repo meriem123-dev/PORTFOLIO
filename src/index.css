@@ -32,8 +32,10 @@
   }
 }
 
-html,
-body,
-* {
-  cursor: none !important;
+@media (pointer: fine) {
+  html,
+  body,
+  * {
+    cursor: none !important;
+  }
 }

@@ -59,30 +59,30 @@ const ContactSection = () => {
 
   return (
     <section className="py-20 bg-gray-900" id="contact">
-      <div className="container mx-auto max-w-7xl px-6">
+      <div className="container mx-auto max-w-7xl min-w-0 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-2">
             Let's Connect
           </h2>
-          <div className="w-28 h-1 bg-primary mx-auto mt-2 rounded-2xl"></div>
+          <div className="w-28 h-1 bg-primary mx-auto min-w-0 mt-2 rounded-2xl"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-start min-w-0">
           {/* Left */}
-          <div className="text-left">
+          <div className="text-left min-w-0">
             <p className="text-gray-400 mb-10 leading-relaxed text-base">
               I'm always open to discussing new opportunities, innovative ideas,
               and exciting projects. Whether you're looking for a collaborator,
               an intern, or simply want to connect, feel free to reach out.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-8 min-w-0">
               {contact.map((inf) => {
                 const Icon = inf.icon;
                 return (
                   <div
                     key={inf.id}
-                    className="flex items-center gap-5 p-4 rounded-2xl bg-primary/10 backdrop-blur-sm border border-white/10 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_0_40px_-5px_rgba(62,130,231,0.2)] group"
+                    className="flex min-w-0 items-center gap-5 p-4 rounded-2xl bg-primary/10 backdrop-blur-sm border border-white/10 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_0_40px_-5px_rgba(62,130,231,0.2)] group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-110 transition-all duration-300 shrink-0">
                       <Icon size={22} className="text-primary" />
@@ -113,7 +113,7 @@ const ContactSection = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-[#0d0d14] border border-white/10 rounded-xl overflow-hidden shadow-xl font-mono">
+          <div className="bg-[#0d0d14] min-w-0 border border-white/10 rounded-xl overflow-hidden shadow-xl font-mono">
             {/* barre  */}
             <div className="flex items-center gap-2 bg-[#1a1a2e] border-b border-white/10 px-4 py-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
@@ -125,7 +125,7 @@ const ContactSection = () => {
             </div>
 
             {/* Terminal  */}
-            <div className="p-6 space-y-5">
+            <div className="p-6 space-y-5 min-w-0">
               {/* Shell prompt */}
               <p className="text-sm">
                 <span className="text-primary">$ </span>
@@ -137,12 +137,12 @@ const ContactSection = () => {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 {/* Full Name */}
                 <div>
-                  <p className="text-primary text-xs mb-1.5">
+                  <div className="text-primary text-xs mb-1.5">
                     <div className="flex gap-2 items-center">
                       <ArrowRight />{" "}
                       <span className="text-white/50">from_name</span>
                     </div>
-                  </p>
+                  </div>
                   <input
                     type="text"
                     name="from_name"
@@ -154,12 +154,12 @@ const ContactSection = () => {
 
                 {/* Email */}
                 <div>
-                  <p className="text-primary text-xs mb-1.5">
+                  <div className="text-primary text-xs mb-1.5">
                     <div className="flex gap-2 items-center">
                       <ArrowRight />{" "}
                       <span className="text-white/50">from_email</span>
                     </div>
-                  </p>
+                  </div>
                   <input
                     type="email"
                     name="from_email"
@@ -171,12 +171,12 @@ const ContactSection = () => {
 
                 {/* Message */}
                 <div>
-                  <p className="text-primary text-xs mb-1.5">
+                  <div className="text-primary text-xs mb-1.5">
                     <div className="flex gap-2 items-center">
                       <ArrowRight />{" "}
                       <span className="text-white/50">message</span>
                     </div>
-                  </p>
+                  </div>
                   <textarea
                     name="message"
                     rows="5"
