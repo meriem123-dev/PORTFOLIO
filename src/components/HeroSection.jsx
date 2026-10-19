@@ -1,6 +1,5 @@
 import { Download } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import React, { useState } from "react";
 
 import HeaderImage from "../assets/HeaderImage.jpg";
 
@@ -53,7 +52,7 @@ const HeroSection = () => {
                 </button>
 
                 <a
-                  href="/CV_English.pdf"
+                  href="/CV_Meriem_HAMOUCHE_2026.pdf"
                   download
                   className="border border-primary px-6 md:px-7 py-3 rounded-full w-full sm:w-max flex justify-center items-center gap-2 
                                  text-primary hover:bg-primary hover:text-white hover:border-white transition-all duration-300 group"

@@ -1,15 +1,34 @@
-import React from "react";
-import cityquest from "../assets/cityquest.jpeg";
+import cityquest from "../assets/cityquest.jpg";
 import connect from "../assets/connect.png";
 import roadskill from "../assets/roadskill.png";
 import pencraft from "../assets/pencraft.png";
+import mentorsphere from "../assets/mentorsphere.png";
+import tourism from "../assets/tourism.png";
 
-import { FolderGit2 } from "lucide-react";
+import { FolderGit2, Link2 } from "lucide-react";
 
 const Projects = () => {
   const projets = [
     {
       id: 1,
+      image: mentorsphere,
+      title: "MentorSphere",
+      desc: "An intelligent web platform designed to connect mentors and entrepreneurs in a structured way, with each project having its own workspace, mentoring sessions, objectives, and progress tracking.",
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma ORM",
+        "API Groq",
+        "Socket.io",
+        "Mailjet",
+      ],
+      github: "https://github.com/meriem123-dev/mentorsphere",
+      link: "https://mentorsphere-ten.vercel.app/",
+    },
+    {
+      id: 2,
       image: cityquest,
       title: "CitiQuest",
       desc: "A gamified citizen engagement mobile application that encourages community participation through location-based missions, XP rewards, badges, and real-time notifications. Includes dedicated spaces for citizens, associations, and administrators.",
@@ -24,14 +43,6 @@ const Projects = () => {
       github: "https://github.com/imenelc1/citiQuest",
     },
     {
-      id: 2,
-      image: connect,
-      title: "Connect",
-      desc: "A full-stack e-learning platform designed for universities, featuring course management, coding exercises, quizzes, gamification, collaborative spaces, and an AI-powered educational assistant.",
-      tech: ["React", "Django", "PostgreSQL", "Tailwind CSS", "Groq AI"],
-      github: "https://github.com/imenelc1/Connect",
-    },
-    {
       id: 3,
       image: roadskill,
       title: "RoadSkill",
@@ -41,11 +52,27 @@ const Projects = () => {
     },
     {
       id: 4,
+      image: connect,
+      title: "Connect",
+      desc: "A full-stack e-learning platform designed for universities, featuring course management, coding exercises, quizzes, gamification, collaborative spaces, and an AI-powered educational assistant.",
+      tech: ["React", "Django", "PostgreSQL", "Tailwind CSS", "Groq AI"],
+    },
+    {
+      id: 5,
       image: pencraft,
       title: "Pencraft",
       desc: "A full-stack e-commerce platform for personalized graphic design and printing services, allowing customers to place orders, and manage purchases through an intuitive interface.",
       tech: ["Flask", "MySQL", "JavaScript", "HTML", "CSS"],
       github: "https://github.com/meriem123-dev/pencraft",
+    },
+    {
+      id: 6,
+      image: tourism,
+      title: "Tourism & Happiness Analysis",
+      desc: "Analyzed the relationship between national happiness scores and tourist arrivals using Power BI to identify countries with untapped tourism potential and explore opportunities for tourism development.",
+      tech: ["Microsoft Power BI", "Power Query", "DAX", "TopoJSON",],
+      github: "https://github.com/meriem123-dev/tourism__happiness__analysis",
+      link :"https://app.powerbi.com/groups/me/reports/0ea16740-ee71-46d4-9454-34d77a344bec/3f2a7441880ea67223b6?ctid=ade6634c-cd11-4ffa-bbfd-f8cea67799c7&experience=power-bi"
     },
   ];
 
@@ -88,11 +115,14 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={prj.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
+
+                <div className="flex justify-between items-end-safe pt-5">
+                  {prj.github && (
+                    <a
+                      href={prj.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
                               flex items-center gap-2
                               py-4
                               rounded-lg
@@ -102,10 +132,32 @@ const Projects = () => {
                               transition-all
                               duration-300
                             "
-                >
-                  <FolderGit2 size={14}/>
-                  GitHub
-                </a>
+                    >
+                      <FolderGit2 size={14} />
+                      GitHub
+                    </a>
+                  )}
+                  {prj.link && (
+                    <a
+                      href={prj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                              flex items-center gap-2
+                              py-4
+                              rounded-lg
+                              text-primary
+                              hover:bg-primary
+                              hover:text-white
+                              transition-all
+                              duration-300
+                            "
+                    >
+                      <Link2 size={14} />
+                      Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

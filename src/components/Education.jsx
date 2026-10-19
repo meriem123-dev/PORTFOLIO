@@ -1,4 +1,3 @@
-import React from "react";
 import EducationImage from "../assets/educ.svg";
 import { Calendar, BookOpen, GraduationCap, MapPin } from "lucide-react";
 

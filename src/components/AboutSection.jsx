@@ -1,4 +1,3 @@
-import React from "react";
 import about from "../assets/about.jpg";
 
 const AboutSection = () => {
@@ -11,7 +10,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-gray-400 text-base lg:text-lg mb-10 leading-relaxed">
-            I'm a fourth-year Software Engineering student who enjoys learning
+            I'm a fifth-year Software Engineering student who enjoys learning
             through hands-on projects and practical challenges. I like exploring
             new technologies and improving my technical skills by building
             real-world applications.
@@ -28,7 +27,7 @@ const AboutSection = () => {
               data-aos="zoom-in"
             >
               <h3 className="text-primary font-bold text-l md:text-2xl">
-                4th Year
+                5th Year
               </h3>
               <p className="text-xs text-gray-400 uppercase tracking-wider mt-0.5">
                 Software Engineering

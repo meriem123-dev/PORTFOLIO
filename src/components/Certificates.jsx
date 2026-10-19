@@ -1,4 +1,3 @@
-import React from "react";
 import { Award, Calendar, ExternalLink, ShieldCheck } from "lucide-react";
 
 const Certificates = () => {
@@ -11,7 +10,6 @@ const Certificates = () => {
     link: "/certificates/attestation Algorithmiques.pdf",
     details:
       "Completed two levels of algorithmics training, covering algorithm design, problem-solving techniques, flowcharts, and fundamental data structures.",
-    tags: ["Algorithms", "Problem Solving", "Data Structures"],
   },
   {
     id: 2,
@@ -21,17 +19,33 @@ const Certificates = () => {
     link: "/certificates/Attestation JAVA.pdf",
     details:
       "Completed a Java development program covering object-oriented programming, Java fundamentals, and application development.",
-    tags: ["Java", "OOP", "Software Development"],
   },
   {
     id: 3,
-    title: "English Language Certificate (B2)",
+    title: "English Language Certificate (C1)",
     issuer: "ECA School, Béjaïa",
     date: "2024",
-    link: "/certificates/B2 certif.pdf",
+    link: "/certificates/attestation_English.pdf",
     details:
-      "Achieved a B2 level in English, demonstrating proficiency in professional communication, reading, writing, and speaking.",
-    tags: ["English", "B2", "Communication"],
+      "Achieved a C1 level in English, demonstrating proficiency in professional communication, reading, writing, and speaking.",
+  },
+  {
+    id: 4,
+    title: "Introduction to IoT certificate",
+    issuer: "Cisco Networking academy",
+    date: "2026",
+    link: "/certificates/Introduction_to_IoT_certificate.pdf",
+    details:
+      "Learned the fundamentals of IoT, including connected devices, sensors,network connectivity.",
+  },
+  {
+    id: 5,
+    title: "Endpoint Security certificate",
+    issuer: "Cisco Networking academy",
+    date: "2026",
+    link: "/certificates/Endpoint_Security_certificate.pdf",
+    details:
+      "Learned the common security threats, malware prevention and access control.",
   },
 ];
 
